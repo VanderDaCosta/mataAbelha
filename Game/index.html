@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <meta charset='UTF-8'>
+    <head>
+        <meta charset="utf-8">
+        <title>BoraTreinar</title>
+        <link rel="stylesheet" href="style.css" />
+        <!--
+            onrize - serve para ajustar as dimensões da tela
+            dependendo de qual tamanho o usuário deseja
+        -->
+    </head>
+
+    <body onresize="dimensaoTela()">
+        <script src="main.js"></script>
+
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="imagens/coracao_cheio.png" />
+                <img id="v2" src="imagens/coracao_cheio.png" />
+                <img id="v3" src="imagens/coracao_cheio.png" />
+                <img id="v4" src="imagens/coracao_cheio.png" />
+                <img id="v5" src="imagens/coracao_cheio.png" />
+            </div>
+
+            <div class="cronometro">
+                Tempo restante: <span id="cronometro"></span>
+            </div>
+        </div>
+
+        <!--imagens que serão utilizadas-->
+        <script>
+            document.getElementById('cronometro').innerHTML = tempo;
+        
+            var posicaoAbelha = setInterval(function () {
+                posicaoAleatoria();
+            }, criaAbelhaTempo);
+        </script>
+    </body>
+
+</html>
